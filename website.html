@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dr. Jane Doe | Academic Website</title>
+  <style>
+    :root {
+      --primary-color: #004080;
+      --bg-color: #fafafa;
+      --text-color: #222;
+      --link-color: #004080;
+      --header-bg: #004080;
+      --header-text: #fff;
+      --footer-bg: #004080;
+      --footer-text: #fff;
+    }
+
+    [data-theme="dark"] {
+      --primary-color: #66aaff;
+      --bg-color: #121212;
+      --text-color: #f2f2f2;
+      --link-color: #66aaff;
+      --header-bg: #1a1a1a;
+      --header-text: #f2f2f2;
+      --footer-bg: #1a1a1a;
+      --footer-text: #f2f2f2;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Inter", sans-serif;
+      line-height: 1.6;
+      color: var(--text-color);
+      background-color: var(--bg-color);
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    header {
+      background-color: var(--header-bg);
+      color: var(--header-text);
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 1.25rem;
+      margin: 0;
+    }
+
+    nav a {
+      color: var(--header-text);
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 3rem 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    section h2 {
+      color: var(--primary-color);
+      border-bottom: 2px solid var(--primary-color);
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+
+    .bio-img {
+      float: right;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-left: 1.5rem;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    footer {
+      background-color: var(--footer-bg);
+      color: var(--footer-text);
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+
+    a {
+      color: var(--link-color);
+      transition: color 0.2s;
+    }
+
+    .theme-toggle {
+      background: none;
+      border: 1px solid var(--header-text);
+      color: var(--header-text);
+      border-radius: 20px;
+      padding: 0.3rem 0.8rem;
+      cursor: pointer;
+      font-size: 0.9rem;
+      margin-left: 1rem;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .theme-toggle:hover {
+      background-color: var(--header-text);
+      color: var(--header-bg);
+    }
+
+    @media (max-width: 700px) {
+      .bio-img {
+        float: none;
+        display: block;
+        margin: 0 auto 1rem auto;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        margin-top: 0.5rem;
+      }
+
+      nav a {
+        margin-left: 0;
+        margin-right: 1rem;
+      }
+
+      .theme-toggle {
+        margin-top: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div style="display:flex;align-items:center;gap:1rem;">
+      <h1>Dr. Jane Doe</h1>
+      <button class="theme-toggle" id="themeToggle">☀️ Light</button>
+    </div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#publications">Publications</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="home">
+    <h2>Welcome</h2>
+    <img src="your-photo.jpg" alt="Profile photo" class="bio-img" />
+    <p>Hello and welcome to my academic website. I am a researcher and lecturer in the field of data science and applied analytics. My work focuses on using computational and statistical methods to better understand complex systems in business, society, and technology.</p>
+    <p>This site provides information about my research, teaching, and publications. Feel free to explore and get in touch.</p>
+  </section>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>I am currently a Lecturer in Data Science at Example University. I completed my Ph.D. in Information Systems at Sample Institute, where my dissertation focused on predictive modeling and business intelligence frameworks.</p>
+    <p>My academic interests include machine learning, data visualization, decision support systems, and the ethical use of artificial intelligence in organizational contexts.</p>
+  </section>
+
+  <section id="research">
+    <h2>Research</h2>
+    <p>My current research explores the intersection of data-driven decision making and human-centered design. I am particularly interested in how organizations can effectively use analytical insights to drive sustainable and ethical innovation.</p>
+    <ul>
+      <li><strong>Current Projects:</strong> Predictive analytics for social impact, Data ethics in AI systems, Human–AI collaboration frameworks.</li>
+      <li><strong>Collaborations:</strong> Working with interdisciplinary teams across computer science, business, and social sciences.</li>
+    </ul>
+  </section>
+
+  <section id="teaching">
+    <h2>Teaching</h2>
+    <p>I teach undergraduate and graduate courses in data science, statistics, and business analytics. My teaching emphasizes practical skill-building, critical thinking, and ethical awareness in data-driven contexts.</p>
+    <ul>
+      <li>Data Science Fundamentals (Undergraduate)</li>
+      <li>Advanced Analytics and Visualization (Graduate)</li>
+      <li>Research Methods in Information Systems (Graduate)</li>
+    </ul>
+  </section>
+
+  <section id="publications">
+    <h2>Publications</h2>
+    <p>Selected recent publications:</p>
+    <ul>
+      <li>Doe, J. (2024). <em>Ethical Decision-Making in Machine Learning Systems</em>. Journal of Data Ethics, 12(3), 45–67.</li>
+      <li>Doe, J., & Smith, A. (2023). <em>Visual Analytics for Strategic Business Insights</em>. Information Systems Review, 18(2), 201–220.</li>
+      <li>Doe, J. (2022). <em>Predictive Models for Sustainable Business Operations</em>. Proceedings of the International Conference on Business Analytics.</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:jane.doe@example.edu">jane.doe@example.edu</a></p>
+    <p>Office: Room 123, Department of Data Science, Example University</p>
+    <p>Links:
+      <a href="#">ORCID</a> |
+      <a href="#">Google Scholar</a> |
+      <a href="#">LinkedIn</a> |
+      <a href="#">CV (PDF)</a>
+    </p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Dr. Jane Doe — Example University</p>
+  </footer>
+
+  <script>
+    // Theme toggle logic
+    const toggle = document.getElementById("themeToggle");
+    const root = document.documentElement;
+    const savedTheme = localStorage.getItem("theme") || "light";
+
+    root.setAttribute("data-theme", savedTheme);
+    toggle.textContent = savedTheme === "dark" ? "🌙 Dark" : "☀️ Light";
+
+    toggle.addEventListener("click", () => {
+      const current = root.getAttribute("data-theme");
+      const next = current === "light" ? "dark" : "light";
+      root.setAttribute("data-theme", next);
+      localStorage.setItem("theme", next);
+      toggle.textContent = next === "dark" ? "🌙 Dark" : "☀️ Light";
+    });
+  </script>
+</body>
+</html>
